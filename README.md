@@ -1,28 +1,19 @@
-# vue3shck
+# vue3-app
 
-## Project setup
+## npm安装
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 在线使用
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 生产环境打包
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 #### 一、Setup 函数的使用
 
