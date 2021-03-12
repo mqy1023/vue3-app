@@ -34,5 +34,12 @@ export default [
     meta: {
       login: true
     }
+  }, {
+    path: '/qdetail',
+    name: 'querydetail',
+    component: () => import(/* webpackChunkName: "QueryDetail" */ '../views/QueryDetail.vue'),
+    meta: {
+      login: true
+    }
   }
 ]

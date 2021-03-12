@@ -34,18 +34,18 @@
 <script>
 import { ref, onMounted, onActivated } from 'vue'
 import { Toast } from 'vant'
-// import {useRouter} from 'vue-router'
+import {useRouter} from 'vue-router'
 import {get} from '../utils/request'
 import HomeItem from '@/components/HomeItem'
 import {useStore} from 'vuex'
 
 // menu点击
 const useMenuEffect = () => {
-  // const router = useRouter()
+  const router = useRouter()
   const handleMenuClick = (info) => {
     console.log('info==' + info)
     Toast(info)
-    // router.push('/treasure')
+    router.push({ path: '/qdetail', query: { name: info }})
   }
   return { handleMenuClick }
 }
