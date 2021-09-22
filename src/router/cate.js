@@ -4,10 +4,10 @@ const Tabbar = () =>
 
 export default [
   {
-    path: '/mine',
-    name: 'mine',
+    path: '/cate',
+    name: 'cate',
     components: {
-      default: () => import(/* webpackChunkName: "mine" */ '../views/Mine.vue'),
+      default: () => import(/* webpackChunkName: "mine" */ '../views/cate/Cate.vue'),
       tabbar: Tabbar
     },
     meta: {

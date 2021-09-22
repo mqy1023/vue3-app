@@ -55,6 +55,7 @@ const useNearbyListEffect = () => {
   const getNearbyList = async () => {
     const result = await get('/api/shop/hot-list')
     if (result?.errno === 0 && result?.data?.length) {
+      console.log(result.data.concat(result.data[0]))
       nearbyList.value = result.data.concat(result.data[0])
     }
   }
@@ -73,7 +74,8 @@ export default {
     })
     onActivated(() => {
       // 用于测试vuex
-      store.commit('changeChanceInfo', { chanceInfo: '随机数：' + Math.random() })
+      // store.commit('changeChanceInfo', { chanceInfo: '随机数：' + Math.random() }) // 跳过了actions，执行commit到mutations的用法
+      store.dispatch('changeInfo', '随机数：' + Math.random())
     })
 
     const iconsList = [
@@ -82,13 +84,14 @@ export default {
       { imgName: '水果店', desc: '水果店'},
       { imgName: '鲜花', desc: '鲜花绿植'}
     ]
+
+    console.log('nearbyList==', nearbyList.value)
     return {nearbyList, handleMenuClick, iconsList}
   }
 }
 </script>
 <style scoped lang="scss">
   @import '../assets/scss/viriables.scss';
-
   .banner {
     width: 90vw;
     margin: 3vw 5vw;

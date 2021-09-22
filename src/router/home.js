@@ -1,6 +1,7 @@
 const Tabbar = () =>
   import(/* webpackChunkName: "TabBar" */ '../components/TabBar')
 
+// import 异步加载路由
 export default [
   {
     path: '/:catchAll(.*)',

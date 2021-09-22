@@ -36,6 +36,12 @@ export default {
           pathName: 'home'
         },
         {
+          name: '分类',
+          path: '/cate',
+          icon: '&#xe6f3;',
+          pathName: 'cate'
+        },
+        {
           name: '我的',
           path: '/mine',
           icon: '&#xe660;',

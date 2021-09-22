@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-
+// vuex数据管理框架
 const setChanceInfo = (state) => {
   const { chanceInfo } = state
   localStorage.chanceInfo = chanceInfo
@@ -21,6 +21,11 @@ export default createStore({
     }
   },
   actions: {
+    changeInfo ({commit, state}, infos) {
+      const preInfos = state.chanceInfo
+      console.log('preInfos=', preInfos)
+      commit('changeChanceInfo', { chanceInfo: infos })
+    }
   },
   modules: {
   }
